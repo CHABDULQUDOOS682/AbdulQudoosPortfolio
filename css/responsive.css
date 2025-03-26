@@ -131,6 +131,14 @@
     transform: rotate(-45deg) translate(5px, -6px);
   }
   
+  /* Theme toggle button position adjustment for mobile */
+  .theme-toggle-btn {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -222,38 +230,63 @@
   }
 }
 
-/* Dark mode detection - automatically switch to dark theme if user prefers it */
+/* Dark mode detection - automatically switch to dark theme if user prefers it and hasn't manually set a preference */
 @media (prefers-color-scheme: dark) {
-  :root {
+  body:not(.light-theme):not(.dark-theme) {
     --text-color: #e1e1e1;
     --text-light: #b0b0b0;
     --bg-color: #1a1a1a;
     --bg-light: #2d2d2d;
     --border-color: #444;
+    --secondary-color: #a9cce3;
   }
   
-  .image-placeholder {
+  body:not(.light-theme):not(.dark-theme) h1,
+  body:not(.light-theme):not(.dark-theme) h2,
+  body:not(.light-theme):not(.dark-theme) h3,
+  body:not(.light-theme):not(.dark-theme) h4,
+  body:not(.light-theme):not(.dark-theme) h5,
+  body:not(.light-theme):not(.dark-theme) h6 {
+    color: #f0f0f0;
+  }
+  
+  body:not(.light-theme):not(.dark-theme) .section-title {
+    color: #f0f0f0;
+  }
+  
+  body:not(.light-theme):not(.dark-theme) .skill-category h3,
+  body:not(.light-theme):not(.dark-theme) .about-text h3,
+  body:not(.light-theme):not(.dark-theme) .project-content h3,
+  body:not(.light-theme):not(.dark-theme) .contact-info h3,
+  body:not(.light-theme):not(.dark-theme) .contact-form h3 {
+    color: #a9cce3;
+  }
+  
+  body:not(.light-theme):not(.dark-theme) .image-placeholder {
     background-color: #333;
   }
   
-  .code-snippet {
+  body:not(.light-theme):not(.dark-theme) .code-snippet {
     background-color: #1e1e1e;
   }
   
-  .project-card, .stat, .skill-item, .contact-form form {
+  body:not(.light-theme):not(.dark-theme) .project-card, 
+  body:not(.light-theme):not(.dark-theme) .stat, 
+  body:not(.light-theme):not(.dark-theme) .skill-item, 
+  body:not(.light-theme):not(.dark-theme) .contact-form form {
     background-color: #252525;
   }
   
-  .project-tech span {
+  body:not(.light-theme):not(.dark-theme) .project-tech span {
     background-color: #333;
   }
   
-  .footer {
+  body:not(.light-theme):not(.dark-theme) .footer {
     background-color: #111;
   }
   
-  .form-group input,
-  .form-group textarea {
+  body:not(.light-theme):not(.dark-theme) .form-group input,
+  body:not(.light-theme):not(.dark-theme) .form-group textarea {
     background-color: #333;
     color: var(--text-color);
     border-color: #555;

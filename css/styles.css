@@ -262,6 +262,30 @@ img {
   transition: all var(--transition-normal);
 }
 
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin-right: 1rem;
+  padding: 0.3rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--bg-light);
+  transform: translateY(-2px);
+  color: var(--primary-color);
+}
+
 /* ===== Hero Section ===== */
 .hero-section {
   height: 100vh;
@@ -779,4 +803,70 @@ img {
 
 .delay-3 {
   transition-delay: 0.6s;
+}
+
+/* ===== Dark Theme Styles ===== */
+.dark-theme {
+  --text-color: #e1e1e1;
+  --text-light: #b0b0b0;
+  --bg-color: #1a1a1a;
+  --bg-light: #2d2d2d;
+  --border-color: #444;
+  --secondary-color: #a9cce3; /* Lighter blue in dark mode */
+}
+
+.dark-theme h1, 
+.dark-theme h2, 
+.dark-theme h3, 
+.dark-theme h4, 
+.dark-theme h5, 
+.dark-theme h6 {
+  color: #f0f0f0; /* Lighter color for headings in dark mode */
+}
+
+.dark-theme .section-title {
+  color: #f0f0f0;
+}
+
+.dark-theme .skill-category h3,
+.dark-theme .about-text h3,
+.dark-theme .project-content h3,
+.dark-theme .contact-info h3,
+.dark-theme .contact-form h3 {
+  color: #a9cce3; /* Lighter blue for section headings */
+}
+
+.dark-theme .image-placeholder {
+  background-color: #333;
+}
+
+.dark-theme .code-snippet {
+  background-color: #1e1e1e;
+}
+
+.dark-theme .project-card, 
+.dark-theme .stat, 
+.dark-theme .skill-item, 
+.dark-theme .contact-form form {
+  background-color: #252525;
+}
+
+.dark-theme .project-tech span {
+  background-color: #333;
+}
+
+.dark-theme .form-group input,
+.dark-theme .form-group textarea {
+  background-color: #333;
+  color: var(--text-color);
+  border-color: #555;
+}
+
+.dark-theme .theme-toggle-btn {
+  color: #f0f0f0;
+}
+
+.dark-theme .theme-toggle-btn:hover {
+  background-color: #333;
+  color: var(--primary-color);
 }

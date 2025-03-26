@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeProjectFilters();
     initializeContactForm();
     initializeSmoothScrolling();
+    initializeThemeToggle();
 });
 
 /**
@@ -219,5 +220,49 @@ function initializeSmoothScrolling() {
                 behavior: 'smooth'
             });
         });
+    });
+}
+
+/**
+ * Initializes theme toggle functionality
+ * - Adds a theme toggle button to the header
+ * - Handles switching between light and dark themes
+ * - Saves user preference to localStorage
+ */
+function initializeThemeToggle() {
+    // Create theme toggle button
+    const themeToggleBtn = document.createElement('button');
+    themeToggleBtn.className = 'theme-toggle-btn';
+    themeToggleBtn.setAttribute('aria-label', 'Toggle Dark/Light Mode');
+    themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    
+    // Add it to the header next to the nav
+    const mainNav = document.querySelector('.main-nav');
+    mainNav.insertBefore(themeToggleBtn, mainNav.firstChild);
+    
+    // Check for saved user preference
+    const savedTheme = localStorage.getItem('theme');
+    
+    // If user has previously selected dark theme or prefers dark color scheme
+    if (savedTheme === 'dark' || (savedTheme === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.body.classList.add('dark-theme');
+        themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+    
+    // Toggle theme on button click
+    themeToggleBtn.addEventListener('click', function() {
+        // Remove any existing theme classes
+        document.body.classList.remove('dark-theme', 'light-theme');
+        
+        // Toggle between light and dark
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
+            themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            document.body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+            themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        }
     });
 }
