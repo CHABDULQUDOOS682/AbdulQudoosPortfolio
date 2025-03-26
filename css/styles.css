@@ -622,6 +622,7 @@ img {
 .filter-btn {
   padding: 8px 16px;
   background-color: var(--bg-light);
+  color: var(--primary-color);
   border: none;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
