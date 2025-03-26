@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby on Rails Developer | Portfolio</title>
+    <meta name="description" content="Experienced Ruby on Rails Developer specializing in building robust web applications">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <span class="logo-text">Ruby<span class="accent">Dev</span></span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero/Home Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="animate-on-load">Hi, I'm <span class="accent">Alex Ruby</span></h1>
+                        <h2 class="animate-on-load delay-1">Ruby on Rails Developer</h2>
+                        <p class="animate-on-load delay-2">I build robust, scalable web applications with Ruby on Rails and modern frontend technologies.</p>
+                        <div class="hero-buttons animate-on-load delay-3">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="hero-image animate-on-load delay-2">
+                        <div class="code-snippet">
+                            <pre><code>
+class Developer < ApplicationRecord
+  has_many :skills
+  has_many :projects
+  
+  def initialize
+    @passionate = true
+    @coffee_level = :high
+  end
+  
+  def code
+    while @passionate
+      write_clean_code
+      solve_problems
+      refill_coffee if @coffee_level == :low
+    end
+  end
+end
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Ruby on Rails Specialist</h3>
+                        <p>With over 5 years of experience in web development, I specialize in building scalable web applications using Ruby on Rails. I'm passionate about clean code, test-driven development, and creating intuitive user experiences.</p>
+                        
+                        <p>My journey in web development started with a computer science degree, followed by work at startups and established companies. This diverse experience has given me a well-rounded perspective on building products that users love.</p>
+                        
+                        <p>When I'm not coding, you'll find me contributing to open-source projects, mentoring junior developers, or exploring new technologies to stay at the cutting edge of web development.</p>
+                        
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">30+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Ruby">
+                                <div class="skill-icon"><i class="fas fa-gem"></i></div>
+                                <div class="skill-info">
+                                    <h4>Ruby</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Rails">
+                                <div class="skill-icon"><i class="fas fa-train"></i></div>
+                                <div class="skill-info">
+                                    <h4>Ruby on Rails</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="PostgreSQL">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <div class="skill-info">
+                                    <h4>PostgreSQL</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="API">
+                                <div class="skill-icon"><i class="fas fa-plug"></i></div>
+                                <div class="skill-info">
+                                    <h4>RESTful APIs</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="HTML">
+                                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                                <div class="skill-info">
+                                    <h4>HTML5</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="CSS">
+                                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>CSS3</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Stimulus">
+                                <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                                <div class="skill-info">
+                                    <h4>Stimulus JS</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools & Methodologies</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Git">
+                                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>Git</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="TDD">
+                                <div class="skill-icon"><i class="fas fa-vial"></i></div>
+                                <div class="skill-info">
+                                    <h4>TDD</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Docker">
+                                <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                                <div class="skill-info">
+                                    <h4>Docker</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="CI/CD">
+                                <div class="skill-icon"><i class="fas fa-sync-alt"></i></div>
+                                <div class="skill-info">
+                                    <h4>CI/CD</h4>
+                                    <div class="skill-level">
+                                        <div class="progress-bar" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web-app">Web Apps</button>
+                    <button class="filter-btn" data-filter="api">API</button>
+                    <button class="filter-btn" data-filter="e-commerce">E-commerce</button>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="web-app">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>TaskFlow Pro</h3>
+                            <p>A collaborative project management tool built with Rails 7, Hotwire, and Stimulus JS. Features include real-time updates, drag-and-drop task management, and team collaboration tools.</p>
+                            <div class="project-tech">
+                                <span>Rails 7</span>
+                                <span>Hotwire</span>
+                                <span>PostgreSQL</span>
+                                <span>Stimulus JS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small"><i class="fas fa-eye"></i> Live Demo</a>
+                                <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="api">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>RESTful API Platform</h3>
+                            <p>A comprehensive API platform for data integration with third-party services. Implements JWT authentication, request rate limiting, and detailed API documentation with Swagger.</p>
+                            <div class="project-tech">
+                                <span>Rails API</span>
+                                <span>JWT</span>
+                                <span>Redis</span>
+                                <span>RSpec</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small"><i class="fas fa-book"></i> Documentation</a>
+                                <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="e-commerce">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>ArtisanMarket</h3>
+                            <p>A marketplace platform for artisans to sell handcrafted products. Features include payment processing, vendor management, and an admin dashboard for analytics.</p>
+                            <div class="project-tech">
+                                <span>Rails 6</span>
+                                <span>Stripe</span>
+                                <span>Elasticsearch</span>
+                                <span>AWS S3</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small"><i class="fas fa-eye"></i> Live Demo</a>
+                                <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-category="web-app">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>MeetSync</h3>
+                            <p>An appointment scheduling application with calendar integration. Allows users to book appointments based on availability and sends automated reminders via email and SMS.</p>
+                            <div class="project-tech">
+                                <span>Rails</span>
+                                <span>Sidekiq</span>
+                                <span>Twilio API</span>
+                                <span>Google Calendar API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small"><i class="fas fa-eye"></i> Live Demo</a>
+                                <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-category="e-commerce">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>FoodDelivery App</h3>
+                            <p>A food delivery platform connecting local restaurants with customers. Features include real-time order tracking, restaurant management, and a customer loyalty program.</p>
+                            <div class="project-tech">
+                                <span>Rails</span>
+                                <span>Action Cable</span>
+                                <span>Google Maps API</span>
+                                <span>Redis</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small"><i class="fas fa-eye"></i> Live Demo</a>
+                                <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-category="api">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Analytics Dashboard</h3>
+                            <p>A data visualization platform for businesses to monitor key performance indicators. Features customizable dashboards, data export options, and automated reporting.</p>
+                            <div class="project-tech">
+                                <span>Rails</span>
+                                <span>D3.js</span>
+                                <span>GraphQL</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-small"><i class="fas fa-eye"></i> Live Demo</a>
+                                <a href="#" class="btn btn-small btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm currently available for freelance work and full-time opportunities. If you have a project that needs a Rails expert or just want to chat about web development, get in touch!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>hello@rubydev.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="DEV Community"><i class="fab fa-dev"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Send Me a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Ruby<span class="accent">Dev</span></span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RubyDev Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
