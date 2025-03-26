@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeContactForm();
     initializeSmoothScrolling();
     initializeThemeToggle();
+    initializeCaseStudyModals();
 });
 
 /**
@@ -265,4 +266,69 @@ function initializeThemeToggle() {
             themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
         }
     });
+}
+
+/**
+ * Initializes case study modals
+ * - Handles opening and closing of case study modals
+ * - Implements keyboard accessibility for modals
+ */
+function initializeCaseStudyModals() {
+    const modalButtons = document.querySelectorAll('.btn-case-study');
+    const modals = document.querySelectorAll('.case-study-modal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+    
+    if (!modalButtons.length || !modals.length) return;
+    
+    // Open modal when case study button is clicked
+    modalButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            
+            // Prevent scrolling of background content
+            document.body.classList.add('no-scroll');
+            
+            // Display and animate the modal
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+        });
+    });
+    
+    // Close modal when close button is clicked
+    closeButtons.forEach(button => {
+        button.addEventListener('click', closeActiveModal);
+    });
+    
+    // Close modal when clicking outside the content
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeActiveModal();
+            }
+        });
+    });
+    
+    // Close modal when pressing ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeActiveModal();
+        }
+    });
+    
+    // Helper function to close the active modal
+    function closeActiveModal() {
+        const activeModal = document.querySelector('.case-study-modal.active');
+        if (activeModal) {
+            activeModal.classList.remove('active');
+            
+            // Wait for the transition to finish before hiding
+            setTimeout(() => {
+                activeModal.style.display = 'none';
+                document.body.classList.remove('no-scroll');
+            }, 300);
+        }
+    }
 }
