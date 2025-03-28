@@ -392,7 +392,7 @@ img {
 
 .about-content {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   gap: 3rem;
 }
 
@@ -418,6 +418,16 @@ img {
 .about-text p {
   margin-bottom: var(--spacing-md);
   color: var(--text-light);
+}
+
+.about-text li {
+  color: var(--text-light);
+  padding-left: 10px;
+}
+
+.highlights {
+  color: var(--primary-color)!important;
+  font-size: 22px;
 }
 
 .about-stats {
