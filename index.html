@@ -59,12 +59,12 @@
 class Developer < ApplicationRecord
   has_many :skills
   has_many :projects
-  
+
   def initialize
     @passionate = true
     @coffee_level = :high
   end
-  
+
   def code
     while @passionate
       write_clean_code
@@ -311,6 +311,9 @@ end
 
     <script src="js/main.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/mailer.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/animations.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
