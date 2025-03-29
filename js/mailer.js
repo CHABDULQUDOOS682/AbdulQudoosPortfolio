@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
 
-    console.log(import.meta.env.PUBLIC_KEY);
-    console.log(import.meta.env.SERVICE_ID);
-    console.log(import.meta.env.TEMPLATE_ID);
+    console.log(process.env.PUBLIC_KEY);
+    console.log(process.env.SERVICE_ID);
+    console.log(process.env.TEMPLATE_ID);
 
     const formData = {
         name: "",
@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // user_id: emailJSConfig.PUBLIC_KEY,
 
             // **** For Live Usage ****
-            service_id: import.meta.env.SERVICE_ID,
-            template_id: import.meta.env.TEMPLATE_ID,
-            user_id: import.meta.env.PUBLIC_KEY,
+            service_id: process.env.SERVICE_ID,
+            template_id: process.env.TEMPLATE_ID,
+            user_id: process.env.PUBLIC_KEY,
             template_params: { ...formData }
         };
 
