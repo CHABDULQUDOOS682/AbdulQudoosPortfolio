@@ -392,7 +392,6 @@ img {
 
 .about-content {
   display: flex;
-  /*align-items: center;*/
   gap: 3rem;
 }
 
@@ -401,7 +400,6 @@ img {
 }
 
 .about-image .image-placeholder {
-  height: 350px;
   width: 100%;
 }
 
@@ -428,6 +426,7 @@ img {
 .highlights {
   color: var(--primary-color)!important;
   font-size: 22px;
+  margin-top: 5px;
 }
 
 .about-stats {
@@ -728,7 +727,7 @@ img {
 
 /* Case Study Button */
 .btn-case-study {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: white;
 }
 

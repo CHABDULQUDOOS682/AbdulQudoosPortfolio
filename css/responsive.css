@@ -49,11 +49,7 @@
   .about-content {
     flex-direction: column;
   }
-  
-  .about-image {
-    margin-bottom: var(--spacing-lg);
-  }
-  
+
   .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
@@ -133,10 +129,7 @@
   
   /* Theme toggle button position adjustment for mobile */
   .theme-toggle-btn {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-right: 0px;
   }
   
   .projects-grid {
