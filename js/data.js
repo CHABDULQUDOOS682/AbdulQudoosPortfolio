@@ -1,3 +1,4 @@
+import emailJSConfig from "./config.js";
 const projects = [
     // "web-app","api","e-commerce"
     {
@@ -82,11 +83,11 @@ const projects = [
     },
     {
         name: "Portfolio",
-        category: "web-app",
+        category: "personal",
         image: "assets/project-images/Portfolio.png",
         description: "My Portfolio 😊",
         technologies: ["HTML", "CSS", "JS" ],
-        liveDemo: "#",
+        liveDemo: "https://abdulqudoos.netlify.app/",
         githubLink: "https://github.com/CHABDULQUDOOS682/AbdulQudoosPortfolio",
         caseStudy: "Portfolio"
     }
