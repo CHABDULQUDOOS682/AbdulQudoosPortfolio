@@ -25,12 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
             user_id: emailJSConfig.PUBLIC_KEY,
         };
 
-
-
-        console.log("=>", emailJSData.service_id);
-        console.log("=>", emailJSData.template_id);
-        console.log("=>", emailJSData.user_id);
-
         fetch("https://api.emailjs.com/api/v1.0/email/send", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
