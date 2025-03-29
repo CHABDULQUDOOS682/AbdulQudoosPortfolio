@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             service_id: emailJSConfig.SERVICE_ID,
             template_id: emailJSConfig.TEMPLATE_ID,
             user_id: emailJSConfig.PUBLIC_KEY,
+            template_params: { ...formData }
         };
 
         fetch("https://api.emailjs.com/api/v1.0/email/send", {
