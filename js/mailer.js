@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // user_id: emailJSConfig.PUBLIC_KEY,
 
             // **** For Live Usage ****
-            service_id: import.meta.env.SERVICE_ID,
-            template_id: import.meta.env.TEMPLATE_ID,
-            user_id: import.meta.env.PUBLIC_KEY,
+            service_id: SERVICE_ID,
+            template_id: TEMPLATE_ID,
+            user_id: PUBLIC_KEY,
             template_params: { ...formData }
         };
 
