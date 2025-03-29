@@ -658,6 +658,9 @@ img {
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -674,8 +677,20 @@ img {
   height: 200px;
 }
 
+.project-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 15px;
+}
+
+
 .project-content {
   padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-content h3 {
