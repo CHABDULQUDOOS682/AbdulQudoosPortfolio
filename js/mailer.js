@@ -1,10 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
 
-    console.log(process.env.PUBLIC_KEY);
-    console.log(process.env.SERVICE_ID);
-    console.log(process.env.TEMPLATE_ID);
-
     const formData = {
         name: "",
         email: "",
@@ -24,17 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         const emailJSData = {
-            // **** For Local Usage ****
-
-            // service_id: emailJSConfig.SERVICE_ID,
-            // template_id: emailJSConfig.TEMPLATE_ID,
-            // user_id: emailJSConfig.PUBLIC_KEY,
-
-            // **** For Live Usage ****
-            service_id: process.env.SERVICE_ID,
-            template_id: process.env.TEMPLATE_ID,
-            user_id: process.env.PUBLIC_KEY,
-            template_params: { ...formData }
+            service_id: emailJSConfig.SERVICE_ID,
+            template_id: emailJSConfig.TEMPLATE_ID,
+            user_id: emailJSConfig.PUBLIC_KEY,
         };
 
 

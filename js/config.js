@@ -1,6 +1,6 @@
 
 const emailJSConfig = {
-    PUBLIC_KEY: "",
-    SERVICE_ID: "",
-    TEMPLATE_ID: ""
+    PUBLIC_KEY: "pxmSwnDIWCT9hFoew",
+    SERVICE_ID: "service_zq1iwin",
+    TEMPLATE_ID: "template_tfrkhn9"
 };
