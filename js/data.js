@@ -1,4 +1,3 @@
-import emailJSConfig from "./config.js";
 const projects = [
     // "web-app","api","e-commerce"
     {

@@ -1,3 +1,4 @@
+import emailJSConfig from "./config.js";
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
 
