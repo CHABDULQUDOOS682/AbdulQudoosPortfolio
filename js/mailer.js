@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
 
+    console.log(import.meta.env.PUBLIC_KEY);
+    console.log(import.meta.env.SERVICE_ID);
+    console.log(import.meta.env.TEMPLATE_ID);
+
     const formData = {
         name: "",
         email: "",
@@ -27,11 +31,17 @@ document.addEventListener("DOMContentLoaded", function () {
             // user_id: emailJSConfig.PUBLIC_KEY,
 
             // **** For Live Usage ****
-            service_id: SERVICE_ID,
-            template_id: TEMPLATE_ID,
-            user_id: PUBLIC_KEY,
+            service_id: import.meta.env.SERVICE_ID,
+            template_id: import.meta.env.TEMPLATE_ID,
+            user_id: import.meta.env.PUBLIC_KEY,
             template_params: { ...formData }
         };
+
+
+
+        console.log("=>", emailJSData.service_id);
+        console.log("=>", emailJSData.template_id);
+        console.log("=>", emailJSData.user_id);
 
         fetch("https://api.emailjs.com/api/v1.0/email/send", {
             method: "POST",
