@@ -1169,3 +1169,38 @@ img {
   background-color: var(--primary-color);
   box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
+
+.project-description {
+  padding-bottom: 1rem;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.project-description p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.feature-list li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+}
